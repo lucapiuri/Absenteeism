@@ -30,6 +30,8 @@ All the data preprocessing is executed in the Jupyter Notebook file "Absenteeism
 
 The resulting preprocessed dataset is: Absenteeism_preprocessed.csv
 
+We saved a "scaler" object that will allow us to scale new data the same way we did with the testing data.
+
 
 THE LOGISTIC REGRESSION
 
@@ -50,3 +52,10 @@ This is now a problem suiting a logistic regression.
 
 -  We store the model by "pickling" it, so that we can export it and use it elsewhere. The stored model contains all the weights and the bias, the fact that it's a logistic regression, the random state for the data shuffling etc.
 
+
+LOADING AND USING THE MODEL 
+
+Since we exported the model, we can now use it outside of the Jupyter Notebook in which we created it
+In this new Notebook we load the absenteeism module and the scaler, in order to preprocess new data and run our regression with a fresh dataset.
+
+We export the the new dataset with the added predicted values created by our regression and we can proceed visualizing the results in Tableau
