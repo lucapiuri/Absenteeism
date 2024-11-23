@@ -46,4 +46,7 @@ This is now a problem suiting a logistic regression.
 - We drop some variables that did not have strong predictive powers ('Day of the Week','Daily Work Load Average','Distance to Work')
 
 - The coefficients are predicting the log odds, so we interpret them by finding their exponentials and we add a "Odds Ratio" column to our summary table
+-  We test the model with our testing set and assess its accuracy
+
+-  We store the model by "pickling" it, so that we can export it and use it elsewhere. The stored model contains all the weights and the bias, the fact that it's a logistic regression, the random state for the data shuffling etc.
 
